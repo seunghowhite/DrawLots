@@ -4,41 +4,41 @@
 
 # dependencies
 #node_modules
-/front/node_modules
-/front/.pnp
-/front/.pnp.*
+/frontend/node_modules
+/frontend/.pnp
+/frontend/.pnp.*
 .yarn/*
-/front/!.yarn/patches
-/front/!.yarn/plugins
-/front/!.yarn/releases
-/front/!.yarn/versions
+/frontend/!.yarn/patches
+/frontend/!.yarn/plugins
+/frontend/!.yarn/releases
+/frontend/!.yarn/versions
 
 # testing
-/front/coverage
+/frontend/coverage
 
 # next.js
-/front/.next/
-/front/out/
+/frontend/.next/
+/frontend/out/
 
 # production
-/front/build
+/frontend/build
 
 # misc
-/front/.DS_Store
+/frontend/.DS_Store
 /front/*.pem
 
 # debug
-/front/npm-debug.log*
-/front/yarn-debug.log*
-/front/yarn-error.log*
-/front/.pnpm-debug.log*
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/.pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-/front/.env*
+/frontend/.env*
 
 # vercel
-/front/.vercel
+/frontend/.vercel
 
 # typescript
 /front/*.tsbuildinfo
-/front/next-env.d.ts
+/frontend/next-env.d.ts
