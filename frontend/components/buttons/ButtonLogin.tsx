@@ -2,18 +2,19 @@
 
 import ArrowIcon from "@/public/svg/ArrowIcon";
 
-interface IButtonLogin {
+interface IButtonLogin extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   text: string;
 }
 
-export default function ButtonLogin({ className, text }: IButtonLogin) {
+export default function ButtonLogin({ className, text, ...props }: IButtonLogin) {
   return (
     <button
       onClick={() => {}}
       className={`h-[50px] w-full max-w-[70%] rounded-[15px] border-2 border-mbBlue text-mbBlue ${className}
         hover:focus:shadow-outline-blue-500 focus:shadow-outline-blue-500 group flex items-center justify-center gap-2.5 text-xl
         font-bold hover:border-mbOrange hover:bg-mbOrange hover:text-white hover:shadow-xl`}
+      {...props}
     >
       {text}
       <ArrowIcon />

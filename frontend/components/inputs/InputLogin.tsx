@@ -1,16 +1,17 @@
 import Image from "next/image";
 
+import CheckPassword from "@/public/svg/check-password.svg";
 import Password from "@/public/svg/password.svg";
 import User from "@/public/svg/user.svg";
 
 interface IInputLogin {
   className?: string;
-  type: "id" | "password";
+  placeHolder?: string;
+  type: "id" | "password" | "checkPassword";
 }
 
-export default function InputLogin({ type }: IInputLogin) {
-  const Icon = type === "id" ? User : Password;
-  const placeHolder = type === "id" ? "id @ megabridge.co.kr" : "12자이하";
+export default function InputLogin({ type, placeHolder }: IInputLogin) {
+  const Icon = type === "id" ? User : type === "password" ? Password : CheckPassword;
   const maxLength = type === "id" ? 35 : 12;
   return (
     <div className="flex w-full max-w-[70%] items-center gap-2 rounded-[15px] border-2 border-mbBlue px-4 focus-within:border-mbOrange">
