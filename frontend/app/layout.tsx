@@ -24,15 +24,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} flex justify-center bg-[#E9E9E9] antialiased`}>
-        <div
-          className={
-            "h-lvh w-full max-w-lg bg-white shadow-[10px_0px_20px_rgba(0,0,0,0.1),-10px_0px_20px_rgba(0,0,0,0.1)]"
-          }
-        >
-          {children}
-        </div>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} flex justify-center bg-[#E9E9E9] antialiased`}
+    >
+      <body
+        className={
+          "h-lvh w-full max-w-lg bg-white shadow-[10px_0px_20px_rgba(0,0,0,0.01),-10px_0px_20px_rgba(0,0,0,0.01)]"
+        }
+      >
+        {children}
       </body>
     </html>
   );

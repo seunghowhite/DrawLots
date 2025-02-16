@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import ButtonLogin from "@/components/buttons/ButtonLogin";
 import InputLogin from "@/components/inputs/InputLogin";
@@ -11,9 +12,13 @@ import MegabridgeLogo from "@/public/svg/megabridge-logo-icon.svg";
 export default function LoginPage() {
   const [isFirst, setIsFirst] = useState(false);
   const [warningText, setWarningText] = useState("");
-
+  const router = useRouter();
   const loginHandler = () => {
-    setIsFirst(true);
+    if (!isFirst) {
+      setIsFirst(true);
+    } else {
+      router.push("/main");
+    }
   };
   return (
     <div className={"flex flex-col items-center"}>
