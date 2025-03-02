@@ -19,7 +19,7 @@ export default function Footer() {
     () => [
       { text: "홈", link: "/home", icon: Home, iconFocus: HomeFocus },
       { text: "랭킹", link: "/rank", icon: Rank, iconFocus: RankFocus },
-      { text: "승인", link: "/approval", icon: Approval, iconFocus: ApprovalFocus },
+      { text: "등록", link: "/regist", icon: Approval, iconFocus: ApprovalFocus },
       { text: "관리자", link: "/admin", icon: Admin, iconFocus: AdminFocus },
       { text: "마이페이지", link: "/mypage", icon: MyPage, iconFocus: MyPageFocus },
     ],
